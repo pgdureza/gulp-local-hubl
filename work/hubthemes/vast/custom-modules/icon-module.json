@@ -1,0 +1,21 @@
+{
+    "name": "Icon Module",
+    "widget_label": "",
+    "fields": [
+        {
+            "help_text": "Please input your icon code in the following format: [fa icon=\"home\"]. For a list of available icons click <a href=\"#\" target=\"blank\">here</a>",
+            "default": "[fa icon=\"home\"]",
+            "type": "text",
+            "name": "icon_module",
+            "label": "Icon Module"
+        },
+        {
+            "help_text": "Icon size in pixels. Ex: 20px.",
+            "default": "80px",
+            "type": "text",
+            "name": "icon_size",
+            "label": "Icon Size"
+        }
+    ],
+    "source": "<span class=\"accentColor3 text-center\" style=\"font-size:{{ widget.icon_size }}; vertical-align: top;\">{{ widget.icon_module }}</span>"
+}

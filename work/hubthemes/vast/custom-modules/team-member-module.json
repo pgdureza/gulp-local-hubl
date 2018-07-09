@@ -1,0 +1,61 @@
+{
+    "name": "Team Member Module",
+    "widget_label": "",
+    "fields": [
+        {
+            "default": {
+                "src": "http://cdn2.hubspot.net/hub/414391/file-1299468471-jpg/images/bristow.jpg",
+                "alt": "bristow.jpg",
+                "width": "400",
+                "height": "400"
+            },
+            "help_text": "",
+            "type": "image",
+            "name": "team_member_head_shot",
+            "label": "Team Member Head Shot"
+        },
+        {
+            "default": "Shawn Bristow",
+            "help_text": "",
+            "type": "text",
+            "name": "team_member_name",
+            "label": "Team Member Name"
+        },
+        {
+            "default": "President",
+            "help_text": "",
+            "type": "text",
+            "name": "team_member_title",
+            "label": "Team Member Title"
+        },
+        {
+            "default": "<span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "team_member_bio",
+            "label": "Team Member Bio"
+        },
+        {
+            "default": "Copy and paste your facebook URL here",
+            "help_text": "",
+            "type": "text",
+            "name": "facebook_link",
+            "label": "Facebook link"
+        },
+        {
+            "default": "Copy and paste your facebook URL here",
+            "help_text": "",
+            "type": "text",
+            "name": "linkedin_link",
+            "label": "Linkedin Link"
+        },
+        {
+            "default": "Copy and paste your Twitter link here",
+            "help_text": "",
+            "type": "text",
+            "name": "twitter_link",
+            "label": "Twitter Link"
+        }
+    ],
+    "source": "<div class=\"padding20tb clearfix\">\n<div class=\"row\">\n  <div class=\"span3 team-member-headshot text-center\">{% if widget.team_member_head_shot.src %}\n    <img src=\"{{ widget.team_member_head_shot.src }}\" width=\"{{ widget.team_member_head_shot.width }}\" height=\"{{ widget.team_member_head_shot.height }}\" alt=\"{{ widget.team_member_head_shot.alt }}\">\n{% endif %}\n    <p class=\"team-member-social text-center\"><a href=\"{{ widget.facebook_link }}\">[fa icon=\"facebook-square\"]</a> <a href=\"{{ widget.linkedin_link }}\">[fa icon=\"linkedin-square\"]</a>  <a href=\"{{ widget.twitter_link }}\">[fa icon=\"twitter-square\"]</a></p>\n</div>\n  <div class=\"span9\">\n      <h3 class=\"team-member-name\">{{ widget.team_member_name }}</h2>\n      \t<h5 class=\"team-member-title\">{{ widget.team_member_title }}</h4>\n  \t\t\t<p class=\"team-member-bio\">{{ widget.team_member_bio }}</p>\n  </div>\n</div>\n</div>"
+}

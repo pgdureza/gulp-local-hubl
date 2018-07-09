@@ -1,0 +1,49 @@
+{
+    "name": "Tabber",
+    "widget_label": "",
+    "fields": [
+        {
+            "default": "Tab 1",
+            "help_text": "",
+            "type": "text",
+            "name": "tab_1",
+            "label": "Tab 1"
+        },
+        {
+            "default": "Tab 2",
+            "help_text": "",
+            "type": "text",
+            "name": "tab_2",
+            "label": "Tab 2"
+        },
+        {
+            "default": "Tab 3",
+            "help_text": "",
+            "type": "text",
+            "name": "tab_3",
+            "label": "Tab 3"
+        },
+        {
+            "default": "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet elementum tortor, eu mattis risus. Pellentesque lacus ipsum, consequat eget massa et, dapibus vestibulum nibh. Vivamus in fermentum dolor, et rutrum tellus. Praesent commodo nunc id enim tempus viverra. Nulla condimentum porttitor pellentesque. Etiam iaculis rhoncus mauris eu lobortis. Nullam posuere diam nec dui posuere consectetur. Vivamus tincidunt ipsum tempus consectetur fermentum. Fusce ut elementum arcu, a posuere turpis. Maecenas feugiat sit amet lectus nec ornare.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "tab_1_content",
+            "label": "Tab 1 Content"
+        },
+        {
+            "default": "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet elementum tortor, eu mattis risus. Pellentesque lacus ipsum, consequat eget massa et, dapibus vestibulum nibh. Vivamus in fermentum dolor, et rutrum tellus. Praesent commodo nunc id enim tempus viverra. Nulla condimentum porttitor pellentesque. Etiam iaculis rhoncus mauris eu lobortis. Nullam posuere diam nec dui posuere consectetur. Vivamus tincidunt ipsum tempus consectetur fermentum. Fusce ut elementum arcu, a posuere turpis. Maecenas feugiat sit amet lectus nec ornare.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "tab_2_content",
+            "label": "Tab 2 Content"
+        },
+        {
+            "default": "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet elementum tortor, eu mattis risus. Pellentesque lacus ipsum, consequat eget massa et, dapibus vestibulum nibh. Vivamus in fermentum dolor, et rutrum tellus. Praesent commodo nunc id enim tempus viverra. Nulla condimentum porttitor pellentesque. Etiam iaculis rhoncus mauris eu lobortis. Nullam posuere diam nec dui posuere consectetur. Vivamus tincidunt ipsum tempus consectetur fermentum. Fusce ut elementum arcu, a posuere turpis. Maecenas feugiat sit amet lectus nec ornare.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "tab_3_content",
+            "label": "Tab 3 Content"
+        }
+    ],
+    "source": "<div class=\"tabber-wrap\">\n\n    <ul class=\"clearfix tabber-tabs\">\n      <li class=\"active\"><a>{{ widget.tab_1 }}</a></li>\n      <li><a>{{ widget.tab_2 }}</a></li>\n      <li><a>{{ widget.tab_3 }}</a></li>\n    </ul>\n     \n    <div class=\"tabber-content\">\n      <div class=\"tab-pane active\">{{ widget.tab_1_content }}</div>\n      <div class=\"tab-pane\" id=\"tab-2\">{{ widget.tab_2_content }}</div>\n      <div class=\"tab-pane\" id=\"tab-3\">{{ widget.tab_3_content }}</div>\n    </div>\n\n</div>"
+}

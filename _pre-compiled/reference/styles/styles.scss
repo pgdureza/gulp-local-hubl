@@ -1,0 +1,7 @@
+@import "variables";
+@import "mixins";
+
+body {
+    @include flex();
+    background: $bgcolor;
+}

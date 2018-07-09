@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ site_settings.company_name }} Email Services</title>
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+        <style type="text/css">
+            .widget-type-email_subscriptions .cell-wrapper,
+            .widget-type-email_subscriptions_confirmation .cell-wrapper,
+            .widget-type-email_simple_subscription .cell-wrapper {
+                margin-bottom: 0px;
+            }
+            .widget-type-email_subscriptions p,
+            .widget-type-email_subscriptions h1,
+            .widget-type-email_subscriptions h2,
+            .widget-type-email_subscriptions_confirmation p,
+            .widget-type-email_subscriptions_confirmation h1,
+            .widget-type-email_subscriptions_confirmation h2,
+            .widget-type-email_simple_subscription p,
+            .widget-type-email_simple_subscription h1,
+            .widget-type-email_simple_subscription h2 {
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 25px;
+                margin: 1px 0px 4px;
+            }
+            html body .page-header {
+                margin: 0px;
+                padding-bottom: 1em;
+            }
+            .widget-type-email_subscriptions p,
+            .widget-type-email_subscriptions_confirmation p,
+            .widget-type-email_simple_subscription p {
+                font-size: 14px;
+            }
+            .widget-type-email_subscriptions h2,
+            .widget-type-email_subscriptions_confirmation h2,
+            .widget-type-email_simple_subscription h2 {
+                font-size: 14px;
+            }
+            .email-prefs .item {
+                   -moz-user-select: none;
+                -webkit-user-select: none;
+                     -o-user-select: none;
+                        user-select: none;
+                padding-bottom: 1px;
+                position: relative;
+                margin:20px 0px;
+                cursor: pointer;
+                cursor: hand;
+            }
+            label {
+                cursor: pointer;
+                cursor: hand;
+            }
+            .email-prefs .item.disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+            .email-prefs .item .item-inner * {
+                color: #444;
+            }
+            .email-prefs .item .item-inner {
+                   -moz-user-select: none;
+                -webkit-user-select: none;
+                     -o-user-select: none;
+                        user-select: none;
+                -webkit-border-radius: 8px;
+                   -moz-border-radius: 8px;
+                        border-radius: 8px;
+                -moz-transition-property: background;
+                -webkit-transition-property: background;
+                -o-transition-property: background;
+                transition-property: background;
+                -moz-transition-duration: 0.15s;
+                -webkit-transition-duration: 0.15s;
+                -o-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+                -moz-transition-timing-function: linear;
+                -webkit-transition-timing-function: linear;
+                -o-transition-timing-function: linear;
+                transition-timing-function: linear;
+                border: 1px solid #E4E4E4;
+                overflow: hidden;
+                margin-top: 0;
+                padding: 15px;
+                background: #f7f7f7;
+            }
+            .email-prefs .item .item-inner.hovered {
+                -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+                -o-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+            }
+            .email-prefs .item .item-inner.selected {
+                background: #f0f7fc;
+                border: 1px solid #e0e7ec;
+            }
+            .email-prefs .item.disabled .item-inner.hovered {
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                -o-box-shadow: none;
+                box-shadow: none;
+            }
+            .checkbox-row {
+                margin-top:0;
+                overflow:hidden;
+            }
+            .checkbox-row span.fakelabel {
+                   -moz-user-select: none;
+                -webkit-user-select: none;
+                     -o-user-select: none;
+                        user-select: none;
+                text-transform: normal;
+                vertical-align: middle;
+            }
+            .checkbox-row input {
+                vertical-align: middle;
+                margin:0;
+                padding:0;
+                float:left;
+            }
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                .checkbox-row input {
+                    position: relative;
+                    top: 3px;
+                }
+            }
+            p.header {
+                margin-left: 7px;
+            }
+            .checkbox-row span.fakelabel span {
+                float: left;
+                font-weight: bold;
+                margin-left: 7px;
+                vertical-align: top;
+            }
+            .email-prefs .item p {
+                clear: both;
+                margin: 5px 20px 0px;
+            }
+            .email-prefs .thumbnail {
+                bottom: 1px;
+                position: absolute;
+                right: 6px;
+            }
+            .email-prefs .thumbnail.float-top {
+                top: 7px;
+            }
+            .subscribe-options {
+                margin-bottom: 12px;
+                overflow: hidden;
+            }
+            .subscribe-options label {
+                font-size:13px;
+                margin-left:16px;
+                margin-right:16px;
+            }
+            .subscribe-options label span {
+                font-weight: normal;
+                margin-left: 3px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #submitbutton {
+                margin-bottom: 0px;
+            }
+            #email-prefs-form {
+                margin-bottom: 0px;
+            }
+            html body input.hs-input.email-edit {
+                font-size: 20px;
+                line-height: 25px;
+                margin: 0px 0px 2px -6px;
+                width: 450px;
+            }
+        </style>
+        {% style %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('input[type="checkbox"]:not("#globalunsub")')
+                    .click(function(e){
+                        //prevent this click from also clicking the .item
+                        if (!e) {
+                            e = window.event;
+                        }
+                        e.cancelBubble = true;
+                        if (e.stopPropagation) e.stopPropagation();
+                        if ($(this).parents('.item').hasClass('disabled')) {
+                            return false;
+                        }
+                    })
+                    .change(function(){
+                        var self = $(this);
+                        setTimeout(function(){
+                            if (self.is(':checked')) {
+                                self.parents('.item-inner').addClass('selected');
+                            } else {
+                                self.parents('.item-inner').removeClass('selected');
+                            }
+                        }, 5);
+                    })
+                    .change()
+                ;
+
+                $('.item')
+                    .hover(function(){
+                        $(this).find('.item-inner').addClass('hovered');
+                    }, function(){
+                        $(this).find('.item-inner').removeClass('hovered');
+                    })
+                    .click(function(e){
+                        var self = $(this),
+                            input = self.find('input[type="checkbox"]'),
+                            box = self.find('.item-inner')
+                        ;
+                        if (self.hasClass('disabled')) {
+                            return false;
+                        }
+                        setTimeout(function(){
+                            if (input.is(':checked')) {
+                                input.removeAttr('checked');
+                                box.removeClass('selected');
+                            } else {
+                                input.attr('checked', true);
+                                box.addClass('selected');
+                            }
+                        }, 5);
+                    })
+                ;
+
+                $('input#globalunsub').change(function(){
+                    var self = $(this);
+                    if (self.is(':checked')) {
+                        $('.item').addClass('disabled');
+                    } else {
+                        $('.item').removeClass('disabled');
+                    }
+                }).change();
+
+                $('a.email-edit').click(function() {
+                    $(this).parents('h2').hide();
+                    $(this).parents('.page-header').find('input.email-edit').show().focus();
+                });
+            });
+        </script>
+        
+    {{ standard_header_includes }}
+    {% style include_default_custom_css="true" %}
+
+    </head>
+    <body class="subscription-template one-column {{ builtin_body_classes }}" style="">
+<div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+{% include 'custom/system/global/header.html' %}
+            </div><!--end widget-span -->
+        </div><!--end row-->
+        </div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-cell page-center content-wrapper padding60tb" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+                <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+                <div class="row-fluid ">
+                    <div class="span12 widget-span widget-type-cell main-content" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+                        <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+                        <div class="row-fluid ">
+                            <div class="span12 widget-span widget-type-email_simple_subscription " style="" data-widget-type="email_simple_subscription" data-x="0" data-w="12">
+                                <div class="cell-wrapper layout-widget-wrapper">
+                                    {% email_simple_subscription "email_simple_subscription" input_placeholder='email@example.com', button_text='Unsubscribe', label='Backup Unsubscribe', header='Email Unsubscribe', overrideable=True, input_help_text='Your email address:' %}
+                                </div><!--end layout-widget-wrapper -->
+                            </div><!--end widget-span -->
+                        </div><!--end row-->
+                        </div><!--end row-wrapper -->
+                    </div><!--end widget-span -->
+            </div><!--end row-->
+            </div><!--end row-wrapper -->
+        </div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+        <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+        <div class="row-fluid ">
+            <div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+{% include 'custom/system/global/footer.html' %}
+            </div><!--end widget-span -->
+        </div><!--end row-->
+        </div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+        {{ standard_footer_includes }}
+    </body>
+</html>

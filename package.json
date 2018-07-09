@@ -1,0 +1,23 @@
+{
+  "name": "tribe-hubspot",
+  "version": "1.0.0",
+  "description": "Tribe's content for hubspot coded files",
+  "license": "ISC",
+  "author": {
+		"name": "Patrick Dureza",
+		"email": "pgdureza@gmail.com"
+	},
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.1.0",
+    "through2": "^2.0.3"
+  },
+  "scripts": {
+    "hubl": "./bin/local-hubl-server",
+    "start": "gulp"
+  }
+}

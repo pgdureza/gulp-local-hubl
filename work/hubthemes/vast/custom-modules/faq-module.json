@@ -1,0 +1,27 @@
+{
+    "name": "FAQ Module",
+    "widget_label": "",
+    "fields": [
+        {
+            "help_text": "",
+            "default": "Why is the sky blue and the grass green?",
+            "type": "text",
+            "name": "faq_question",
+            "label": "FAQ Question"
+        },
+        {
+            "default": "<span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "faq_answer",
+            "label": "FAQ Answer"
+        },
+        {
+            "help_text": "",
+            "type": "boolean",
+            "name": "expanded",
+            "label": "Expanded?"
+        }
+    ],
+    "source": "<div class=\"accordion\">\n    <div class=\"accordion_group {% if widget.expanded %}expanded{% endif %}\">\n    \t<div class=\"accordion_header\"><span class=\"accordion_icon\">[fa icon=\"plus-square\"]</span> {{ widget.faq_question }}</div>\n\t\t<div class=\"accordion_content\">\n\t\t\t{{ widget.faq_answer }}\n\t\t</div>\n\t</div>\n</div>"
+}

@@ -1,0 +1,69 @@
+{
+    "name": "Pricing Table",
+    "widget_label": "",
+    "fields": [
+        {
+            "default": "Basic",
+            "help_text": "",
+            "type": "text",
+            "name": "pricing_table_heading",
+            "label": "Pricing Table Heading"
+        },
+        {
+            "default": "10",
+            "help_text": "Enter pricing in the this format 10, not $10",
+            "type": "text",
+            "name": "pricing_table_price",
+            "label": "Pricing Table Price"
+        },
+        {
+            "name": "pricing_table_date",
+            "default": "Day",
+            "choices": [
+                [
+                    "Day",
+                    "Day"
+                ],
+                [
+                    "Month",
+                    "Month"
+                ],
+                [
+                    "Annual",
+                    "Annual"
+                ]
+            ],
+            "help_text": "",
+            "label": "Pricing Table Date",
+            "type": "choice"
+        },
+        {
+            "default": "<ul>\n<li>1 user</li>\n<li>10 GB storage</li>\n<li>Email support</li>\n<li>Free update</li>\n</ul>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "pricing_table_rich_text",
+            "label": "Pricing Table Rich Text"
+        },
+        {
+            "default": "Sign Up",
+            "help_text": "",
+            "type": "text",
+            "name": "pricing_table_button_text",
+            "label": "Pricing Table Button Text"
+        },
+        {
+            "help_text": "",
+            "type": "boolean",
+            "name": "pricing_table_popular_label",
+            "label": "Pricing Table Popular Label"
+        },
+        {
+            "help_text": "Paste URL for button. Please use a full link such as: http://www.yourbuttonlink.com",
+            "default": "http://www.yourbuttonlink.com",
+            "type": "text",
+            "name": "pricing_table_button_link",
+            "label": "Pricing Table Button Link"
+        }
+    ],
+    "source": "<div class=\"pricing-table\">\n                        <h3 class=\"heading\">{{ widget.pricing_table_heading }}{% if widget.pricing_table_popular_label %}<span class=\"label\">Popular</span>{% endif %}\n</h3>\n                        <div class=\"content\">\n                            <p class=\"price-figure animated fadeInUp delayp1\"><span class=\"currency\">$</span><span class=\"number\">{{ widget.pricing_table_price }}</span><span class=\"unit\">/{{ widget.pricing_table_date }}</span></p>\n                           {{ widget.pricing_table_rich_text }}                          \n                            <a class=\"cta_solid_button\" href=\"{{ widget.pricing_table_button_link }}\">{{ widget.pricing_table_button_text }}</a>\n                        </div><!--//content-->\n</div>"
+}

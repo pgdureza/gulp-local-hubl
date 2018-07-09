@@ -1,0 +1,271 @@
+{
+  "portal_id" : 1,
+  "id" : 5413396062,
+  "module_id" : 1928544,
+  "marketplace_version" : 32,
+  "schema_version" : 2,
+  "legacy_name" : null,
+  "name" : "Image Slider",
+  "widget_label" : "",
+  "folder_id" : 5090120186,
+  "fields" : [ {
+    "id" : "746381bc-4479-4f20-9478-40feebcf74e2",
+    "name" : "slides",
+    "label" : "Slide",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "errors" : [ ],
+      "min" : 1,
+      "max" : 500,
+      "sorting_label_field" : "f465d30d-b17e-97d9-ea3b-52d9d49066b3",
+      "default" : null
+    },
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "children" : [ {
+      "id" : "f465d30d-b17e-97d9-ea3b-52d9d49066b3",
+      "name" : "img",
+      "label" : "Image",
+      "sortable" : false,
+      "required" : false,
+      "locked" : false,
+      "hierarchical" : false,
+      "max_depth" : 0,
+      "resizable" : true,
+      "type" : "image",
+      "default" : {
+        "src" : "",
+        "alt" : null
+      }
+    }, {
+      "id" : "2b832807-6edd-aaec-7cd3-2406f056f450",
+      "name" : "show_caption",
+      "label" : "Show caption",
+      "sortable" : false,
+      "required" : false,
+      "locked" : false,
+      "hierarchical" : false,
+      "max_depth" : 0,
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "6e264517-abc9-e33b-85df-1946421c8fd1",
+      "name" : "caption",
+      "label" : "Caption",
+      "sortable" : false,
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "2b832807-6edd-aaec-7cd3-2406f056f450",
+        "controlling_value_regex" : "true"
+      },
+      "hierarchical" : false,
+      "max_depth" : 0,
+      "type" : "richtext",
+      "default" : null
+    }, {
+      "id" : "5a5e448a-9d66-4d47-1432-4a73a55d4cdc",
+      "name" : "link_url",
+      "label" : "Link URL",
+      "sortable" : false,
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "hierarchical" : false,
+      "max_depth" : 0,
+      "type" : "text",
+      "default" : null
+    }, {
+      "id" : "1a5f0856-a12f-a16a-c47f-33951bb1cf53",
+      "name" : "open_in_new_tab",
+      "label" : "Open link in new tab",
+      "sortable" : false,
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "5a5e448a-9d66-4d47-1432-4a73a55d4cdc",
+        "controlling_value_regex" : null
+      },
+      "hierarchical" : false,
+      "max_depth" : 0,
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "type" : "group",
+    "default" : [ {
+      "img" : {
+        "src" : "",
+        "alt" : null
+      },
+      "show_caption" : false,
+      "open_in_new_tab" : false
+    } ]
+  }, {
+    "id" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+    "name" : "display_mode",
+    "label" : "Display mode",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "choices" : [ [ "standard", "Standard slider" ], [ "thumbnail", "Thumbnail Navigation" ], [ "lightbox", "Lightbox gallery" ] ],
+    "placeholder" : "Search",
+    "type" : "choice",
+    "default" : "standard"
+  }, {
+    "id" : "e9ab8514-d4f0-ca9d-5ade-9855629319aa",
+    "name" : "loop_slides",
+    "label" : "Loop slides",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "bddb74c6-9bf7-1694-ad32-247ece4d5756",
+    "name" : "auto_advance",
+    "label" : "Auto advance",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "e247e593-1065-6124-8b27-d593a9ec65be",
+    "name" : "num_seconds",
+    "label" : "Time in seconds between auto scrolling",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "display" : "text",
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "step" : 1,
+    "type" : "number",
+    "default" : 5
+  }, {
+    "id" : "a28f6dc8-c7a1-b0c7-3821-79f3baa68693",
+    "name" : "show_pagination",
+    "label" : "Show pagination",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "919f4829-d7b3-9074-e49e-2068976492cc",
+    "name" : "sizing",
+    "label" : "Variable height",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "display" : "select",
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "choices" : [ [ "static", "Always keep slider as tall as the tallest slide" ], [ "resize", "Resize slider whenever the slide changes" ] ],
+    "placeholder" : "Search",
+    "type" : "choice",
+    "default" : "static"
+  }, {
+    "id" : "afb824f1-03c6-f485-42da-d2a3c2bdd264",
+    "name" : "transition",
+    "label" : "Slide transitions",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "display" : "select",
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "choices" : [ [ "slide", "Slide" ], [ "fade", "Fade" ] ],
+    "placeholder" : "Select ",
+    "type" : "choice",
+    "default" : "slide"
+  }, {
+    "id" : "3a33aaa0-bae8-a50a-c512-bc5b3b3b7d2c",
+    "name" : "caption_position",
+    "label" : "Caption position",
+    "sortable" : false,
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ee4e6eb7-e98d-6fc7-5f79-e05442c12a9c",
+      "controlling_value_regex" : "standard|thumbnail"
+    },
+    "display" : "select",
+    "hierarchical" : false,
+    "max_depth" : 0,
+    "choices" : [ [ "below", "Always keep captions below the image" ], [ "superimpose", "Superimpose captions on top of images" ] ],
+    "placeholder" : "Search",
+    "type" : "choice",
+    "default" : "below"
+  } ],
+  "writeable" : false,
+  "is_buffered" : false,
+  "source" : "{% set slides = [] %}\n\n{% for slide in module.slides %}\n\n{% if (slide.link_url is string_startingwith \"http\") or (slide.link_url is string_startingwith \"/\") %}\n    {% set link = slide.link_url %}\n{% elif !slide.link_url %}\n    {% set link = none %}\n{% else %}\n    {% set link = \"//\" ~ slide.link_url %}\n{% endif %}\n\n    {{ slides.append({ \"caption\":  slide.caption,\n        \"show_caption\": slide.show_caption,\n        \"link_url\": link,\n        \"alt_text\": slide.img.alt,\n        \"img_src\": slide.img.src,\n        \"open_in_new_tab\": slide.open_in_new_tab\n        }) | string | replace('true', '')\n    }}\n{% endfor %}\n\n{% if module.display_mode == 'thumbnail' %}\n    {% set withThumbnail = true %}\n    {% set lightbox = false %}\n{% elif module.display_mode == 'lightbox' %}\n    {% set lightbox = true %}\n    {% set withThumbnail = true %}\n{% endif %}\n\n{% image_slider \n    with_thumbnail_nav = '{{ withThumbnail }}',\n    lightbox = '{{ lightbox }}',\n    sizing='{{ module.sizing }}',\n    transition='{{ module.transition }}', \n    caption_position='{{ module.caption_position }}', \n    auto_advance='{{ module.auto_advance }}', \n    overrideable=True, \n    description_text='', \n    show_pagination='{{ module.show_pagination }}', \n    label='{{title}}', \n    slides='{{ slides }}',\n    loop_slides='{{ module.loop_slides }}', \n    num_seconds='{{ module.num_seconds }}',\n%}",
+  "css" : null,
+  "js" : null,
+  "messages" : { },
+  "updated" : 1523301355246,
+  "created" : 1509465305243,
+  "deleted_at" : 0,
+  "author" : "",
+  "default" : true,
+  "tags" : [ "DEFAULT" ],
+  "css_assets" : [ ],
+  "js_assets" : [ ],
+  "label" : "Image Slider",
+  "extra_classes" : "widget-type-image_slider",
+  "icon" : "https://cdn2.hubspotqa.com/hubfs/99263981/edited-imageGallery.svg#image-mask",
+  "external_js" : [ ],
+  "other_assets" : [ ],
+  "placement_rules" : [ ],
+  "global" : false,
+  "cloned_from_module_id" : null,
+  "cloned_from_builtin_type" : null,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "editable_contexts" : [ ],
+  "content_tags" : [ {
+    "name" : "COMPATIBLE_BLOG",
+    "source" : "MARKETPLACE"
+  }, {
+    "name" : "COMPATIBLE_PAGE",
+    "source" : "MARKETPLACE"
+  } ],
+  "help_text" : "",
+  "purchased" : false,
+  "author_at" : 1523301355246
+}

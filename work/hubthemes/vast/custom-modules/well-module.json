@@ -1,0 +1,74 @@
+{
+    "name": "Well Module",
+    "widget_label": "",
+    "fields": [
+        {
+            "name": "type_of_well",
+            "default": "default",
+            "label": "Type of Well",
+            "help_text": "",
+            "choices": [
+                [
+                    "default",
+                    "Default"
+                ],
+                [
+                    "danger",
+                    "Danger"
+                ],
+                [
+                    "primary",
+                    "Primary"
+                ],
+                [
+                    "success",
+                    "Success"
+                ],
+                [
+                    "info",
+                    "Info"
+                ],
+                [
+                    "plain",
+                    "Plain"
+                ]
+            ],
+            "type": "choice"
+        },
+        {
+            "name": "well_size",
+            "default": "small",
+            "label": "Well Size",
+            "help_text": "",
+            "choices": [
+                [
+                    "small",
+                    "Small"
+                ],
+                [
+                    "medium",
+                    "Medium"
+                ],
+                [
+                    "large",
+                    "Large"
+                ]
+            ],
+            "type": "choice"
+        },
+        {
+            "help_text": "",
+            "type": "boolean",
+            "name": "ability_to_close",
+            "label": "Ability to Close"
+        },
+        {
+            "default": "<span>Hi! Im inside of a well module!</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "well_text_editor",
+            "label": "Well Text Editor"
+        }
+    ],
+    "source": "<div id=\"well\">\n    {% if widget.ability_to_close %}\n        <span class=\"close\"><i class=\"fa fa-times\"></i></span>\n    {% endif %} \n    <div class=\"{{ widget.type_of_well }} {{ widget.well_size }}\">\n        {{ widget.well_text_editor }}\n    </div>\n</div>"
+}

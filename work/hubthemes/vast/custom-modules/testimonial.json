@@ -1,0 +1,41 @@
+{
+    "portal_id": 414391,
+    "name": "Testimonial",
+    "widget_label": "",
+    "fields": [
+        {
+            "default": "Shawn Bristow",
+            "help_text": "",
+            "type": "text",
+            "name": "firstlast_name",
+            "label": "First/Last Name"
+        },
+        {
+            "default": "HubSpot, inc.",
+            "help_text": "",
+            "type": "text",
+            "name": "company",
+            "label": "Company"
+        },
+        {
+            "default": {
+                "src": "http://cdn2.hubspot.net/hub/414391/file-1299468471-jpg/images/bristow.jpg",
+                "alt": "bristow.jpg",
+                "height": "400",
+                "width": "400"
+            },
+            "help_text": "",
+            "type": "image",
+            "name": "person_headshot",
+            "label": "Person Headshot"
+        },
+        {
+            "default": "<span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span>",
+            "help_text": "",
+            "type": "richtext",
+            "name": "quote",
+            "label": "Quote"
+        }
+    ],
+    "source": "<div class=\"quote-box\">\n    <blockquote class=\"quote\">{{ widget.quote }}\n        </blockquote><!--//quote-->\n            <p class=\"details\">\n                <span class=\"name\">{{ widget.firstlast_name }}</span>\n                <span class=\"title\">{{ widget.company }}</span>\n            </p> \n                <span class=\"accentColor1 .fa\">[fa icon=\"quote-right\"]</span>                                \n</div>\n<div class=\"testimonial-headshot text-center\">\n{% if widget.person_headshot.src %}\n    <img src=\"{{ widget.person_headshot.src }}\" width=\"{{ widget.person_headshot.width }}\" height=\"{{ widget.person_headshot.height }}\" alt=\"{{ widget.person_headshot.alt }}\">\n{% endif %}\n</div>"
+}
