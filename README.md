@@ -1,3 +1,5 @@
+This boilerplate can be used to develop landing pages locally while using es6 & scss.
+
 ## Workspace Setup:
 1. Clone this repo.
 2. Download and install the Java Development Kit (at least jdk 8)
@@ -12,7 +14,7 @@ https://designers.hubspot.com/docs/tools/local-hubl-server
 
 ## Steps for Development 
 1. create theme folder under /work/hubthemes/vast/custom/page - you can add html files here for your hubl code
-2. add a folder with the same name under _pre-compiled folder. 
+2. create a folder named _pre-compiled
 3. add js and styles folder under the _pre-compiled folder. This is where all JS and CSS file changes will be made.
 4. run `yarn hubl` to start the hubl server
 5. run `yarn start` to start watcher for js and css files

@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ content.html_title }}</title>
-        <meta name="description" content="{{ content.meta_description }}">
-        {{ standard_header_includes }}
-        <link rel="stylesheet" href="{{ get_public_template_url("custom/page/reference/styles/styles.css") }}">
-        <script defer src="{{ get_public_template_url("custom/page/reference/js/app.js") }}"></script>
-    </head>
-    <body>
-        <div> test home </div>
-        {{ standard_footer_includes }}
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ content.html_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    {{ standard_header_includes }}
+    <link rel="stylesheet" href="{{ get_public_template_url("custom/page/reference/styles.css") }}">
+    <script defer src="{{ get_public_template_url("custom/page/reference/app.js") }}"></script>
+  </head>
+  <body>
+    <div> test home </div>
+    {{ standard_footer_includes }}
+  </body>
 </html>

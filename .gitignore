@@ -1,7 +1,7 @@
 node_modules
 
-work/hubthemes/vast/custom/page/**/js/*
-work/hubthemes/vast/custom/page/**/styles/*
+work/hubthemes/vast/custom/page/**/app.js
+work/hubthemes/vast/custom/page/**/styles.css
 bin
 conf
 docs
