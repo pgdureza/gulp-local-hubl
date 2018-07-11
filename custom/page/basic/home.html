@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>{{ content.html_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    {{ standard_header_includes }}
+    <link rel="stylesheet" href="{{ get_public_template_url("custom/styles/custom/styles.css") }}">
+    <script defer src="{{ get_public_template_url("custom/js/custom/app.js") }}"></script>
+  </head>
+  <body>
+    {% include "custom/system/global/header.html" %}
+    <main>
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h3>Header 4</h4>
+    </main>
+    {% include "custom/system/global/footer.html" %}
+    {{ standard_footer_includes }}
+  </body>
+</html>

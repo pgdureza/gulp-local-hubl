@@ -13,16 +13,22 @@
     "babelify": "^8.0.0",
     "browserify": "^16.2.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
     "gulp-flatten": "^0.4.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.1.0",
     "through2": "^2.0.3"
   },
   "scripts": {
-    "hubl": "./bin/local-hubl-server",
+    "hubl": "../../../bin/local-hubl-server",
     "start": "gulp"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 2%",
+    "IE 9"
+  ]
 }

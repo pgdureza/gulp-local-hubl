@@ -1,0 +1,9 @@
+main {
+  height: calc(100vh - 188px);
+  background-color: $bg-color-subdued;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
