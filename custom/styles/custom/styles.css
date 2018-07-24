@@ -1,6 +1,0 @@
-h1,h2,h3,h4,h5{font-family:"Rubik",sans-serif;font-weight:normal;font-style:normal;font-stretch:normal}
-h1{font-size:45px;letter-spacing:1.4px}h2{font-size:25px;line-height:1.32;letter-spacing:1px}
-h3{font-size:16px;font-weight:300;line-height:4.94;letter-spacing:9.1px}p{font-size:14px;line-height:1.79;letter-spacing:.6px}
-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:50px;background-color:#ccc;color:#fff}
-footer{background-color:#ccc;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:20px}
-main{height:calc(100vh - 188px);background-color:#fafafa;color:#191919;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}

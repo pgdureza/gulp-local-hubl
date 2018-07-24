@@ -18,10 +18,12 @@ example: `templateBaseDir: work/hubthemes/gulp-hubl-local`
 * NOTE: The node modules html files are included in the hubl template list, but they are not actual templates. Just ignore those for now.
 
 ## Development
-1. to create new page templates, add html files in `custom/page`
-2. to create and modify js and scss files, modify the files under the `_preprocessed` folder.
-3. do not make changes to `custom/js/custom` and `custom/styles/custom` as these files will be overriden whenever the _preprocessed files will be compiled.
-4. take not on custom/page/basic/home.html on how to import the compiled css and js files
+1. to create new page templates, add html files in `custom/page/basic`
+2. to create and modify js and scss files, modify the files under the `_preprocessed/basic/js` and `_preprocessed/basic/styles` folder.
+3. do not make changes to .js and .css files under `custom/page/basic` as these files will be overriden whenever the _preprocessed files will be compiled.
+4. take note on custom/page/basic/home.html on how to import the compiled css and js files
+
+* NOTE: You may creae your own them folder instead of using the `basic` folder. Just make sure that the theme folder name unde `_preprocessed/<theme_name>` and `custom/page/<theme_name>` are the same.
 
 ## Syncing local files and hubl files through ftp
 https://designers.hubspot.com/docs/tools/using-local-hubl-server-with-ftp

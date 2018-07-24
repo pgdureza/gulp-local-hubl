@@ -11,14 +11,14 @@ const clean = require('gulp-clean');
 const autoprefixer = require('autoprefixer');
 
 const scss = {
-  input: "./_preprocessed/styles/**/*.scss",
-  output: "./custom/styles/custom"
+  input: "./_preprocessed/**/styles/**/*.scss",
+  output: "./custom/page/"
 }
 
 const js = {
-  input: "./_preprocessed/js/*.js",
-  watch: "./_preprocessed/js/**/*.js",
-  output: "./custom/js/custom"
+  input: "./_preprocessed/**/js/*.js",
+  watch: "./_preprocessed/**/js/**/*.js",
+  output: "./custom/page/"
 }
 
 const sassOptions = {
@@ -51,7 +51,7 @@ gulp.task('watch-js', function() {
 });
 
 gulp.task('clean-js', function () {
-  return gulp.src(js.output, {read: false})
+  return gulp.src(js.output  + "/**/*.js", {read: false})
     .pipe(clean());
 });
 
@@ -79,7 +79,7 @@ gulp.task('watch-css', function() {
 });
 
 gulp.task('clean-css', function () {
-  return gulp.src(scss.output, {read: false})
+  return gulp.src(scss.output + "/**/*.css", {read: false})
     .pipe(clean());
 });
 

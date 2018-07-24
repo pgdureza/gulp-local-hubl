@@ -30,5 +30,8 @@
     "last 2 version",
     "> 2%",
     "IE 9"
-  ]
+  ],
+  "dependencies": {
+    "autoprefixer": "^9.0.1"
+  }
 }
